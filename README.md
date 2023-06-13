@@ -1,6 +1,11 @@
 # ServiceInterConnect_DeveloperSandbox
 This guide introduces Skupper to create a Virtual Applications Network (also known as a service network) and create connections across multiple clouds.
 
+In this guide you will discover how to build a service network to connect disparate services across different environments using Red Hat Service Interconnect.
+
+## What is Red Hat Service Interconnect?
+Red Hat Service Interconnect enables application and service connectivity across different environments through layer 7 addressing and routing. Using a simple command line interface, interconnections are created in a matter of minutes, avoiding extensive networking planning, and overhead. All interconnections between environments use mutual TLS(mTLS) to keep your organization’s infrastructure and data protected. Red Hat Service Interconnect is based on the open source Skupper project.
+
 ## Overview
 
 This example is a simple database-backed patient portal web application that shows how you can use Skupper to access a database at a remote site(local laptop) without exposing it to the public internet.
@@ -109,7 +114,7 @@ Skupper gateway: 'username-mac-username'. Use 'skupper gateway status' to get mo
 ```
 - Your local computer should now appear in the console
 ![console-laptop.png](images/console-laptop.png)
-Though we have linked both the cluster and your local environment, we have not exposed any services yet. We have to explicitly mention which services we want to expose over the Service network. By default none of the services in the namespaces are exposed by Red Hat Service Interconnect.
+Though we have linked both the cluster and your local environment, we have not exposed any services yet. We have to explicitly mention which services we want to expose over the Service network. By default none of the services  are exposed by Red Hat Service Interconnect.
 
 - Verify the same by going back to the console. Click on the components tab. You should not be able to see services other than the front end
 ![no-expose.png](images/no-expose.png)

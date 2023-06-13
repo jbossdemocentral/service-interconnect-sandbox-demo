@@ -94,11 +94,11 @@ The site console url is:  https://skupper-username-dev.apps.sandbox-m4.g2pi.p1.o
 - Now that you have established a service network, you can expose services from a local machine on the service network.A service network enables communication between services running in different network locations. For example, if you run a database on a server in your data center, you can deploy a front end in a cluster that can access the data as if the database was running in the cluster.
 
 - Initialize the gateway 
-    - For Docker (Tested on Mac)
+    - For Docker (Tried on Mac)
         ```
         skupper gateway init --config simple_docker.yaml --type docker
         ```
-    - For Podman (Tested on RHEL)
+    - For Podman (Tried on RHEL)
         ```
         skupper gateway init --config simple_podman.yaml --type podman
         ```

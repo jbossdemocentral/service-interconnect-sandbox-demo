@@ -14,7 +14,8 @@ It contains two services:
 
 A PostgreSQL database running on your local machine  which we assume as a private data center.
 
-A web frontend service running on Kubernetes in the public cloud. It uses the PostgreSQL database to display the names of doctors and patients.
+A web frontend service running on OpenShift Sandbox in the public cloud. It uses the PostgreSQL database in the local machine or data centre to display the names of doctors and patients.
+![architecture.png](images/architecture.png)
 
 This example uses the Red Hat Developer Sandbox and your local laptop to deploy the frontend and the database respectively. Below are list of perquisites:
 - Podman or Docker installed on your local machines

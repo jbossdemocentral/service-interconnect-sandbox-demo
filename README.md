@@ -1,5 +1,5 @@
-# ServiceInterConnect_DeveloperSandbox
-This guide introduces Skupper to create a Virtual Applications Network (also known as a service network) and create connections across multiple clouds.
+# Connect your services across different environments with Red Hat Service Interconnect
+This guide introduces Red Hat Service Interconnect (Skupper) to create a Virtual Applications Network (also known as a service network) and create connections across multiple clouds.
 
 In this guide you will discover how to build a service network to connect disparate services across different environments using Red Hat Service Interconnect.
 

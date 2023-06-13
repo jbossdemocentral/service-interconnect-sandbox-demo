@@ -152,7 +152,7 @@ The database service is the proxy service created by exposing the database deplo
 ![patient_portal_works.png](images/patient_portal_works.png)
 
 > **Note:**
-> If the patient data still doesn't show up after establishing the connection, try restarting the pod
+> If the patient data still doesn't show up after establishing the connection, try restarting the frontend pod
 ```
 oc get pods
 oc delete pod <podname>

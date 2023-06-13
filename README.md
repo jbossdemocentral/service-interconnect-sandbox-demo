@@ -83,7 +83,7 @@ oc project
 ```
 
 - If you see an output similar to the one below everything looks good. Otherwise go back to the previous steps which show the steps to login
-````
+```
 Using project "user-dev" on server "https://api.sandbox-c4.k1pi.p1.openshiftapps.com:6443
 ```
 

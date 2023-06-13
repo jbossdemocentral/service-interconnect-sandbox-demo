@@ -28,7 +28,7 @@ This example uses the Red Hat Developer Sandbox and your local laptop to deploy 
 
 ![copy-login.png](images/copy-login.png)
 
-- Copy the login token and paste into your terminal to login to your cluster
+- Copy the login token and paste into the terminal of your computer to login to the cluster
 ![login-token.png](images/login-token.png)
 
 - Deploy the frontend app on your OpenShift Sandbox cluster
@@ -68,7 +68,7 @@ The Database contains a list of patients and doctors, that will show on the pati
 ## Connect the database to the frontend using Red Hat Service Interconnect
 The challenge for us is now to enable the patient portal frontend deployed on the sandbox to connect to the database. For obvious reasons, we do not want to expose the database over the public internet, so a private, secure link needs to be setup between the OpenShift sandbox instance and the database on your computer. This can be accomplished with a VPN between the public cloud and the data center. However a **VPN can be hard to set up**, and **requires deep networking expertise**. Developers also need to request the network admins and go through a time taking approval process for the VPNs to be setup. **Red Hat Service Interconnect on the other hand creates a dedicated layer 7 service network and is a lot easier to set up**. It allows application Developers to establish secure interconnection with other services and applications in different environments without relying on network specialists. With Service Interconnect developers can now create secure virtual application networks without the cumbersome overhead, complexity and delays of traditional connectivity solutions.
 
-- Install Red Hat Service Interconnect
+- Install Red Hat Service Interconnect by running the below command from the terminal of your local computer
 ```
 curl https://skupper.io/install.sh | sh
 ```
@@ -77,7 +77,17 @@ curl https://skupper.io/install.sh | sh
 export PATH="/Users/vravula/bin:$PATH"
 ```
 
-- Initialize Service Interconnect in the sandbox
+- Double check if you are still logged into to the OpenShift Sandbox cluster from your local computer by running the below command
+```
+oc project
+```
+
+- If you see an output similar to the one below everything looks good. Otherwise go back to the previous steps which show the steps to login
+````
+Using project "user-dev" on server "https://api.sandbox-c4.k1pi.p1.openshiftapps.com:6443
+```
+
+- Initialize Service Interconnect in your sandbox environment namespace by running the below command from the terminal of your local computer
 ```
 skupper init --enable-console --enable-flow-collector --console-auth unsecured
 ```

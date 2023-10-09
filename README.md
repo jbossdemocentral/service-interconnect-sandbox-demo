@@ -170,8 +170,7 @@ The database service is the proxy service created by exposing the database deplo
 > **Note:**
 > If the patient data still doesn't show up after establishing the connection, try restarting the frontend pod
 ```
-oc get pods
-oc delete pod <podname>
+ oc delete pods -l deployment=patient-portal-frontend
 ```
 
 Congratulations! You successfully used Red Hat Service Interconnect to build a secure service network between services on two different environments and allowed application to connect and communicate over the secure network. To learn more visit our [website](https://developers.redhat.com/products/service-interconnect/overview)
